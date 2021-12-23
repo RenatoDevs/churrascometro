@@ -24,7 +24,7 @@ function calcular(){
     let qtdTotalRefrigerante = refrigerantePP(duracao) * homem + refrigerantePP(duracao) * mulher + (refrigerantePP(duracao)/2 * crianca);
     
     resultado.innerHTML = `<h1>Você vai precisar de </h1>`
-    resultado.innerHTML += `<span><img src="./imagens/carvão.png" alt="carvão">${(qtdTotalCarne/1000) / 1.2  }Kg</span>`
+    resultado.innerHTML += `<span><img src="./imagens/carvão.png" alt="carvão">${Math.round((qtdTotalCarne/1000) / 1.2)  }Kg</span>`
     resultado.innerHTML += `<span><img src="./imagens/bife.png" alt="carne">${qtdTotalCarne/1000}Kg</span>`
     resultado.innerHTML += `<span><img src="./imagens/cerveja.png" alt="cerveja">${Math.ceil(qtdTotalCerveja/1000)}L ou ${Math.ceil(qtdTotalCerveja/355)} Latas</span>`
     resultado.innerHTML += `<span><img src="./imagens/refrigerante.png" alt="refrigerante">${Math.ceil(qtdTotalRefrigerante/1000)}L ou ${Math.ceil(qtdTotalRefrigerante/2000)} Grr de 2L </span>`
