@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./imagens/iconChurras.png" type="image/png">
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+
+    <title>Churrascometro</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+
+            <div class="textBox">
+                <h1>Churrascômetro</h1>
+                <span>
+                    Calcule o quanto você irá precisar para o seu Churrasco !!
+                </span>
+            </div>
+            <img class="fogo" src="./imagens/fogo.png" alt="">
+            <img class="churras" src="./imagens/churrasco.png" alt="bife">
+            <div class="Box">
+                <div class="left">
+                    <div class="entrada">
+                        <ion-icon name="man"></ion-icon>
+                        <input id=homem name="homem" type="number" placeholder="Homens">
+                    </div>
+                    <div class="entrada">
+                        <ion-icon name="woman"></ion-icon>
+                        <input id=mulher name="mulher" type="number" placeholder="Mulheres">
+                    </div>
+                    <div class="entrada">
+                        <ion-icon name="happy"></ion-icon>
+                        <input id=criancas name="criancas" type="number" placeholder="Crianças">
+                    </div>
+                    <div class="entrada">
+                        <ion-icon name="time"></ion-icon>
+                        <input id=duracao name="duracao" type="number" placeholder="Duração (h)">
+                    </div>
+                    <button onclick="calcular()">Calcular</button>
+                </div>
+
+                <div class="right">
+                    <div id="resultado"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>
