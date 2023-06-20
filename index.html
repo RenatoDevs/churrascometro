@@ -13,48 +13,66 @@
 </head>
 
 <body>
+    <header>
+        <h1>Churrascômetro</h1>
+        <h2>
+            Calcule o quanto você irá precisar para o seu Churrasco !!
+        </h2>
+    </header>
     <main>
-        <div class="container">
-
-            <div class="textBox">
-                <h1>Churrascômetro</h1>
-                <span>
-                    Calcule o quanto você irá precisar para o seu Churrasco !!
-                </span>
+            
+            <div class="box">
+                <ul>
+                    <li>
+                        <img src="./imagens/homem.png" alt="">
+                        <input id=homem name="homem" type="number" placeholder="0">
+                        <label for="homem">Homens</label>
+                    </li>
+                    <li>
+                        <img src="./imagens/mulher.png" alt="">
+                        <input id=mulher name="mulher" type="number" placeholder="0">
+                        <label for="homem">Mulheres</label>
+                    </li>
+                    <li>
+                        <img src="./imagens/criança.png" alt="">
+                        <input id=criancas name="criancas" type="number" placeholder="0">
+                        <label for="homem">Crianças</label>
+                    </li>
+                    <li>
+                        <img src="./imagens/relogio.png" alt="">
+                        <input id=duracao name="duracao" type="number" placeholder="0" required>
+                        <label for="homem">Duração</label>
+                    </li>
+                </ul>
+                <button onclick="calcular()">Calcular</button>
             </div>
-            <img class="fogo" src="./imagens/fogo.png" alt="">
-            <img class="churras" src="./imagens/churrasco.png" alt="bife">
-            <div class="Box">
-                <div class="left">
-                    <div class="entrada">
-                        <ion-icon name="man"></ion-icon>
-                        <input id=homem name="homem" type="number" placeholder="Homens">
-                    </div>
-                    <div class="entrada">
-                        <ion-icon name="woman"></ion-icon>
-                        <input id=mulher name="mulher" type="number" placeholder="Mulheres">
-                    </div>
-                    <div class="entrada">
-                        <ion-icon name="happy"></ion-icon>
-                        <input id=criancas name="criancas" type="number" placeholder="Crianças">
-                    </div>
-                    <div class="entrada">
-                        <ion-icon name="time"></ion-icon>
-                        <input id=duracao name="duracao" type="number" placeholder="Duração (h)">
-                    </div>
-                    <button onclick="calcular()">Calcular</button>
-                </div>
-
-                <div class="right">
-                    <div id="resultado"></div>
-                </div>
+            <!-- <div id="resultado"></div> -->
+            <div class="box">
+                <ul>
+                    <li>
+                        <img src="./imagens/carvão.png" alt="">
+                        <input id=carvao name="carvao" type="text"  placeholder="0">
+                        <label for="carvao">Carvão</label>
+                    </li>
+                    <li>
+                        <img src="./imagens/bife.png" alt="">
+                        <input id=carne name="Carne" type="text" disabled  placeholder="0">
+                        <label for="carne">Carne</label>
+                    </li>
+                    <li>
+                        <img src="./imagens/refrigerante.png" alt="">
+                        <input id=refrigerante name="refrigerante" type="text"disabled  placeholder="0">
+                        <label for="refrigerante">Refrigerante</label>
+                    </li>
+                    <li>
+                        <img src="./imagens/cerveja.png" alt="">
+                        <input id=cerveja name="cerveja" type="text"disabled  placeholder="0">
+                        <label for="cerveja">Cerveja</label>
+                    </li>
+                </ul>
             </div>
-        </div>
     </main>
-
-
     <script src="./js/script.js"></script>
-
 </body>
 
 </html>

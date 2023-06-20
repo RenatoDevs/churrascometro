@@ -2,220 +2,179 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Shizuru&display=swap');
 
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Righteous', cursive;
 }
-.container{
-    width: 100%;
-    min-height: 100vh;
+
+main,
+header,
+.box,
+.box ul,
+.box ul li {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    background: black;
-    position: relative;
-    overflow: hidden;
-    padding-bottom: 50px;
 }
 
 /*                          Topo                        */
-.textBox{
-    
-    position: relative;
+header {
     width: 100%;
-    min-height: 20vh;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background:rgba(163, 65, 0, 0.425);
-    box-shadow: 0 10px 40px rgb(0, 0, 0);
-    z-index: 10;
-}
-.textBox h1{
-    font-family: 'Shizuru', cursive;
-    color: rgb(255, 123, 0);
-    font-size: 4em;
+    min-height: 12vh;
+    background: rgb(255, 102, 0);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.472);
+    color: rgb(255, 255, 255);
+    font-size: 1.5em;
     font-weight: 900;
-}
-.textBox span{
-    color: rgb(255, 123, 0);
-    font-size: 2em;
-    font-weight: 700;
-}
-
-
-/*                      area de calculo e resultado                        */
-.Box{
-    width: 80%;
-    min-height: 75vh;
-    display: grid;
-    grid-template-columns:repeat(2,1fr);
-    border-radius:  0 0 30px 30px ;
-    background:rgb(0, 0, 0);
-    box-shadow: 0 10px 40px rgb(20, 20, 20);
-    z-index: 100;
-    background-color: rgba(206, 110, 0, 0.123);
-}
-.fogo{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    
-}
-.churras{
-    position:absolute;
-    right: 0;
-    top: -80px;
-    opacity: 0.6;
-}
-/*                          Dados                        */
-.left{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; 
-    position: relative;
-}
-.left button{
-    margin-top: 50px;
-    width: 80%;
-    height: 50px;
-    border-radius:20px;
-    border: none;
-    color: black;
-    font-weight: bold;
-    font-size: 30px;
-    background: rgba(255, 255, 255, 0.349);
-    z-index: 3;
-}
-.left button:hover{
-    background: rgb(27, 27, 27);
-    color: rgba(255, 255, 255, 0.712);  
-}
-.entrada{
-    width: 70%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 30px ;
-    position: relative;
-}
-.entrada ion-icon{
-    position: absolute;
-    display: inline-block;
-    font-size: 40px;
-    color: rgb(255, 255, 255)  
-}
-.entrada input{
-    width: 100%;
-    height: 40px;
+    line-height: 1.2em;
     text-align: center;
-    font-size: 40px;
-    font-weight: bold;
+    flex-direction: column;
+    gap: 10px;
+}
+header h2{
+    font-size: 1em;
+}
+
+main {
+    width: 100%;
+    min-height: 88vh;
+    padding:10px;
+    gap: 20px;
+    background-color: #ccc;
+    text-align: center;
+    flex-direction: column;
+}
+.box {
+    width: 100%;
+    max-width: 1500px;
+    flex-direction: column;
+    gap: 10px;
     padding: 10px;
+    background-color: rgba(18, 18, 18, 0.205);
+    box-shadow: 0 0 20px black;
+}
+.box ul {
+    width: 100%;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.box ul li {
+    flex: 1 1 300px;
+    gap: 6px;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.419);
+    flex-direction: column;
+    justify-content: space-between;
+}
+.box ul li img{
+    width: 110px;
+    height: 110px;
+}
+.box button{
+    width: 100%;
+    padding: 5px;
+    background-color: #00000080;
+    color: #fff;
+    font-size: 1.5em;
+    transition: .5s ease-in-out;
+    border: none;
+}
+.box .error{
+    background-color: red;
+}
+.box button:hover{
+    background-color: #fff;
+    color: #000;
+}
+.box ul li input {
+    width: 90%;
+    height: 80px;
+    text-align: center;
+    font-size: 4em;
+    font-weight: bold;
     border: none;
     color: rgb(255, 255, 255);
     background: none;
-    border-bottom: 3px solid rgba(255, 255, 255, 0.397);
 }
+.box ul li label {
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+/* .box input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+
+}
+
+.box input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+
+} */
 
 /*                          Resultados                        */
-.right{
-    z-index: 10;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.resultado {
+    width: 100%;
+    max-width: 800px;
     flex-direction: column;
-    position: relative;    
+    gap: 10px;
+    padding: 10px;
+    background-color: rgba(18, 18, 18, 0.067);
+    box-shadow: 0 0 20px black;
 }
-
-#resultado{
+.resultado img{
+    width: 100px;
+}
+#resultado {
     width: 100%;
     height: 100%;
-    z-index: 100;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 80%;
-    border-radius: 20px;   
 }
-#resultado h1{
+
+#resultado h1 {
     color: rgb(255, 123, 0);
     text-align: center;
     font-size: 50px;
-    font-weight: bold; 
+    font-weight: bold;
     margin-bottom: 30px
 }
-#resultado span{
-    margin-top:10px ;
+
+#resultado span {
+    margin-top: 10px;
     width: 70%;
     color: rgb(255, 123, 0);
     text-align: center;
     font-size: 45px;
     font-weight: bold;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
     background: rgba(36, 36, 36, 0.445);
     padding-right: 20px;
 }
+
 #resultado img {
     width: 90px;
-    background-color: rgba(240, 248, 255, 0.637);
-    border-radius: 20px 0 0 20px;
-    
-    
 }
 
+
 @media (max-width:999px) {
-    .textBox h1{
-        font-size: 50px;
-        margin: 20px;
+    header{
+        padding: 10px 0;
     }
-    .textBox span{
+    header h1{
+        font-size: 35px;
+    }
+    header h2{
         font-size: 20px;
-        text-align: center;
-    }
-    .Box{
-        width: 90%;
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-    .entrada{
-        width: 95%;
-    }
-    .left{
-        margin-bottom: 50px;
-    }
-    .right{
-        margin-bottom: 50px;
-    }
-    #resultado h1{
-        width: 95%;
-        font-size: 35px;
-        
-    }
-    #resultado span{
-        
-        font-size: 35px;
-    }
-    .fogo{
-        display: none;
-    }
-    .churras{
-        position:absolute;
-        right: 0;
-        top: 100px;
-        opacity: 0.6;
     }
 }
