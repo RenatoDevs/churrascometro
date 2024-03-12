@@ -136,6 +136,7 @@ main {
 /*                          Resultados                        */
 .resultado {
     width: 100%;
+    background-color: red;
     max-width: 800px;
     flex-direction: column;
     gap: 10px;
