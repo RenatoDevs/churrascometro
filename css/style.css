@@ -36,6 +36,20 @@ header {
 header h2{
     font-size: 1em;
 }
+header {
+    width: 100%;
+    min-height: 12vh;
+    background: rgb(255, 102, 0);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.472);
+    color: rgb(255, 255, 255);
+    font-size: 1.5em;
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
 
 main {
     width: 100%;
